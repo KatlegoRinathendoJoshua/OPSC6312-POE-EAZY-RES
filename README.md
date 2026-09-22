@@ -66,11 +66,6 @@ cd android && ./gradlew testDebugUnitTest
 cd backend && npm install && npm test
 ```
 
-## Notes for your README/documentation submission
+YouTube Link
 
-Per the brief, your GitHub `README.md` also needs the write-up on
-purpose, design decisions and GitHub/GitHub Actions usage, plus a link
-to your demonstration video, and (if applicable) your AI-usage
-write-up. This file gives you the technical section to build that
-around — add your own screenshots, the app icon/brand explanation from
-your Planning & Design document, and your video link before submitting.
+https://youtube.com/shorts/tQk5-_ej_lc?si=6R1OF9O44ZTtojM-
