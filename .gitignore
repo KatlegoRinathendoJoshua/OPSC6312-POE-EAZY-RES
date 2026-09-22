@@ -1,0 +1,20 @@
+# Android
+android/local.properties
+android/.gradle/
+android/.idea/
+android/*/build/
+android/build/
+android/captures/
+android/.cxx/
+*.apk
+*.ap_
+*.aab
+
+# Node / backend
+backend/node_modules/
+backend/eazyres.db
+backend/eazyres.db-*
+backend/.env
+
+# OS
+.DS_Store

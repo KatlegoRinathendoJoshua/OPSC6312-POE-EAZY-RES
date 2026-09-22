@@ -1,0 +1,9 @@
+<resources>
+    <color name="navy">#0D1B3E</color>
+    <color name="orange">#F2994A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_gray">#F5F6F8</color>
+    <color name="text_dark">#1C1C1E</color>
+    <color name="text_muted">#6B7280</color>
+    <color name="error_red">#D32F2F</color>
+</resources>
