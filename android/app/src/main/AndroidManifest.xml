@@ -27,7 +27,9 @@
         <activity android:name=".ui.home.HomeActivity" android:exported="false" />
         <activity android:name=".ui.property.PropertyDetailActivity" android:exported="false" />
         <activity android:name=".ui.settings.SettingsActivity" android:exported="false" />
-
+        <activity
+            android:name=".ui.saved.SavedPropertiesActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

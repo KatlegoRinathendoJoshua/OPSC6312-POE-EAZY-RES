@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1085155328873",
+    "project_id": "eazyres",
+    "storage_bucket": "eazyres.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085155328873:android:8d2afc10944395b163f3f8",
+        "android_client_info": {
+          "package_name": "com.eazyres.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085155328873-gocs3pfs3ltscud6h93rsak9a9hv3bqs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eazyres.app",
+            "certificate_hash": "7e090934986a76e3ea53011937ed6d68660d295f"
+          }
+        },
+        {
+          "client_id": "1085155328873-0601sjbpth4p884icq59uhfc8itbu7st.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKU6K_8M2tox11pi1--RhOEOfoe9OVQvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085155328873-0601sjbpth4p884icq59uhfc8itbu7st.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

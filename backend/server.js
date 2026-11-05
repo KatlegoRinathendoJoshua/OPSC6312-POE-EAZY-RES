@@ -12,6 +12,7 @@ const cors = require('cors');
 const { router: authRouter } = require('./routes/auth');
 const propertiesRouter = require('./routes/properties');
 const usersRouter = require('./routes/users');
+const favouritesRouter = require('./routes/favourites');
 
 const app = express();
 app.use(cors());
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
 app.use('/auth', authRouter);
 app.use('/properties', propertiesRouter);
 app.use('/users', usersRouter);
+app.use('/favourites', favouritesRouter);
 
 app.use((req, res) => {
   res.status(404).json({ status: 'error', message: 'Not found' });

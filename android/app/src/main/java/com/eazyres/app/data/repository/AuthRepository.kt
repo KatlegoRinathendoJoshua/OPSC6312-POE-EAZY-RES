@@ -5,7 +5,7 @@ import com.eazyres.app.data.model.AuthResponse
 import com.eazyres.app.data.model.LoginRequest
 import com.eazyres.app.data.model.RegisterRequest
 import com.eazyres.app.data.model.UpdateSettingsRequest
-
+import com.eazyres.app.data.model.GoogleLoginRequest
 /**
  * A thin wrapper around the API calls related to authentication.
  * Keeping this separate from the Activities makes the network logic
@@ -45,7 +45,23 @@ class AuthRepository {
             Result.Error(e.localizedMessage ?: "Network error")
         }
     }
+    suspend fun googleLogin(idToken: String): Result<AuthResponse> {
+        return try {
+            val response = api.googleLogin(
+                GoogleLoginRequest(idToken)
+            )
 
+            if (response.isSuccessful && response.body() != null) {
+                Result.Success(response.body()!!)
+            } else {
+                Result.Error(
+                    response.errorBody()?.string() ?: "Google login failed"
+                )
+            }
+        } catch (e: Exception) {
+            Result.Error(e.localizedMessage ?: "Network error")
+        }
+    }
     suspend fun updateSettings(token: String, fullName: String, phone: String): Result<AuthResponse> {
         return try {
             val response = api.updateSettings("Bearer $token", UpdateSettingsRequest(fullName, phone))

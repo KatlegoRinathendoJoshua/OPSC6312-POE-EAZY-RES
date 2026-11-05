@@ -18,6 +18,11 @@ interface ApiService {
     @POST("auth/login")
     suspend fun login(@Body body: LoginRequest): Response<AuthResponse>
 
+    @POST("auth/google")
+    suspend fun googleLogin(
+        @Body body: GoogleLoginRequest
+    ): Response<AuthResponse>
+
     @PUT("users/settings")
     suspend fun updateSettings(
         @Header("Authorization") token: String,
@@ -33,4 +38,24 @@ interface ApiService {
 
     @GET("properties/{id}")
     suspend fun getPropertyById(@Path("id") id: String): Response<Property>
+
+    // Retrieve the logged-in user's saved properties
+    @GET("favourites")
+    suspend fun getFavourites(
+        @Header("Authorization") token: String
+    ): Response<FavouritesResponse>
+
+    // Save a property
+    @POST("favourites/{propertyId}")
+    suspend fun saveFavourite(
+        @Header("Authorization") token: String,
+        @Path("propertyId") propertyId: String
+    ): Response<FavouriteActionResponse>
+
+    // Remove a saved property
+    @DELETE("favourites/{propertyId}")
+    suspend fun removeFavourite(
+        @Header("Authorization") token: String,
+        @Path("propertyId") propertyId: String
+    ): Response<FavouriteActionResponse>
 }

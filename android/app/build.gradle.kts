@@ -1,6 +1,8 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+
 }
 
 android {
@@ -68,4 +70,12 @@ dependencies {
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+//firebase
+    implementation(platform("com.google.firebase:firebase-bom:35.1.0"))
+
+    implementation ("com.google.firebase:firebase-firestore:27.1.0e")
+// Google Sign-In using Credential Manager
+  ////  implementation("androidx.credentials:credentials:1.5.0")
+   // implementation("androidx.credentials:credentials-play-services-auth:1.5.0")
+ //   implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
 }
